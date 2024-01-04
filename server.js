@@ -34,6 +34,6 @@ app.post("/api/create-checkout-session", async (req, res) => {
   res.json({ id: session.id });
 });
 
-app.listen({Port}, () => {
+app.listen(Port, () => {
   console.log("Server is running on port 7000");
 });

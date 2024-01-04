@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+const Port = process.env.PORT || 7000;
 
 app.use(cors());
 app.use(express.json());
@@ -33,6 +34,6 @@ app.post("/api/create-checkout-session", async (req, res) => {
   res.json({ id: session.id });
 });
 
-app.listen(7000, () => {
+app.listen({Port}, () => {
   console.log("Server is running on port 7000");
 });

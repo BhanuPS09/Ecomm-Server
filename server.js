@@ -27,8 +27,8 @@ app.post("/api/create-checkout-session", async (req, res) => {
     payment_method_types: ["card"],
     line_items: products_details,
     mode: "payment",
-    success_url: "http://localhost:3000/success",
-    cancel_url: "http://localhost:3000/failure",
+    success_url: "https://ecommerce-bhanups09.netlify.app/success",
+    cancel_url: "https://ecommerce-bhanups09.netlify.app/failure",
   });
 
   res.json({ id: session.id });
